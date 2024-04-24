@@ -1,0 +1,10 @@
+{% props categories = [] %}
+
+<article data-controller="scroll-reveal" class="w-full w-[368px] flex flex-col gap-7 p-12 sm:max-w-full">
+	<h1 data-scroll-reveal-target="item" data-delay="5000ms" class="reveal heading-medium text-darkGrayBlue">Summary</h1>
+	<twig:BaseSummaryList categories="{{ categories }}" />
+	<div data-scroll-reveal-target="item" data-delay="5600ms" class="relative group reveal">
+		<button class="z-10 absolute top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full body-bold text-white bg-darkGrayBlue p-4 rounded-[128px] bg-gradient-to-b from-lightStaleBlue to-lightRoyalBlue">Continue</button>
+		<div class="z-0 absolute text-center top-0 w-full body-bold text-white bg-darkGrayBlue p-4 rounded-[128px]">Continue</div>
+	</div>
+</article>

@@ -1,0 +1,17 @@
+{% props category = "" %}
+
+{% if category == "Reaction" %}
+    <twig:BaseIconReaction />
+{% endif %}
+
+{% if category == "Memory" %}
+    <twig:BaseIconMemory />
+{% endif %}
+
+{% if category == "Verbal" %}
+    <twig:BaseIconVerbal />
+{% endif %}
+
+{% if category == "Visual" %}
+    <twig:BaseIconVisual />
+{% endif %}

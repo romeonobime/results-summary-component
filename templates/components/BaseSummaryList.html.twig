@@ -1,0 +1,7 @@
+{% props categories = [] %}
+
+<ul class="flex flex-col gap-4">
+	{% for category in categories %}
+		<twig:BaseSummaryListItem index="{{ loop.index }}" score="{{ category.score }}" name="{{ category.name }}"/>
+	{% endfor %}
+</ul>

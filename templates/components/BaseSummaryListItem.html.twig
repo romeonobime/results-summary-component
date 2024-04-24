@@ -1,0 +1,5 @@
+{% props index = 0, name = "", score = "" %}
+
+<li data-scroll-reveal-target="item" data-delay="5{{ index }}00ms" class="reveal w-auto">
+    <twig:BaseCardSummary name="{{ name }}" score="{{ score }}" />
+</li>

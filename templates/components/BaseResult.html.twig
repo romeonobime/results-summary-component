@@ -1,0 +1,23 @@
+{% props result = 0 %}
+
+<div class="w-full max-w-[368px] flex flex-col gap-9 items-center bg-gradient-to-b from-lightStaleBlue to-lightRoyalBlue rounded-[32px] p-12 sm:max-w-full sm:boxShadow sm:rounded-t-none">
+	<h1 class="text-lightLavender heading-medium">Your Result</h1>
+	<div class="flex flex-col items-center gap-6">
+		<div class="w-[200px] h-[200px] flex flex-col items-center justify-center rounded-full bg-gradient-to-b from-violetBlue to-lightRoyalBlue/0">
+			<p 
+                data-controller="countup"
+				data-countup-target="result"
+                data-countup-start-value="0"
+                data-countup-end-value="{{ result }}"
+                data-countup-duration-value="5"
+				data-countup-easing-value="true"
+                class="text-white heading-xlarge">
+            </p>
+			<p class="text-lightLavender body-bold">of 100</p>
+		</div>
+		<div data-controller="scroll-reveal" class="flex flex-col gap-4 items-center">
+			<p data-scroll-reveal-target="item" data-delay="4000ms" class="reveal text-white heading-large">Great</p>
+			<p data-scroll-reveal-target="item" data-delay="4250ms" class="reveal max-w-[260px] text-center text-lightLavender body">Your performance exceed 65% of the people conducting the test here!</p>
+		</div>
+	</div>
+</div>

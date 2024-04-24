@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-light-red: 0deg 100% 67%;
+        --color-orange-yellow: 39deg 100% 56%;
+        --color-green-teal: 166deg 100% 37%;
+        --color-cobalt-blue: 234deg 85% 45%;
+        --color-light-stale-blue: 252deg 100% 67%;
+        --color-light-royal-blue: 241deg 81% 54%;
+        --color-violet-blue: 256deg 72% 46%;
+        --color-persian-blue: 241deg 72% 46%;
+        --color-white: 0deg 0% 100%;
+        --color-pale-blue: 221deg 100% 96%;
+        --color-light-lavender: 241deg 100% 89%;
+        --color-dark-gray-blue: 224deg 30% 27%;
+    }
+
+    @font-face {
+        font-family: "Hanken Grotesk";
+        src: url("./../fonts/HankenGrotesk-VariableFont_wght.ttf");
+    }
+
+    * {
+        font-family: "Hanken Grotesk", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body, html {
+        background-color: hsl(var(--color-pale-blue));
+    }
+}
+
+@layer components {
+    .heading-xlarge {
+        font-size: 72px;
+        line-height: 72px;
+        font-weight: bold;
+    }
+
+    .heading-large {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .heading-medium {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .body-bold {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .body {
+        font-size: 18px;
+    }
+
+    .boxShadow {
+        box-shadow: 0px 30px 60px hsla(224, 82%, 58%, 15%);
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 1s cubic-bezier(0.5, 0, 0, 1);
+        transition-property: opacity, transform;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+}

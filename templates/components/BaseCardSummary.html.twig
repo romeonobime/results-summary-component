@@ -1,0 +1,32 @@
+{% props name = "", score = "", bgColor = "", textColor = "" %}
+
+{% if name == "Reaction" %}
+    {% set bgColor = "bg-lightRed/5" %}
+    {% set textColor = "text-lightRed" %}
+{% endif %}
+
+{% if name == "Memory" %}
+    {% set bgColor = "bg-orangeYellow/5" %}
+    {% set textColor = "text-orangeYellow" %}
+{% endif %}
+
+{% if name == "Verbal" %}
+    {% set bgColor = "bg-greenTeal/5" %}
+    {% set textColor = "text-greenTeal" %}
+{% endif %}
+
+{% if name == "Visual" %}
+    {% set bgColor = "bg-cobaltBlue/5" %}
+    {% set textColor = "text-cobaltBlue" %}
+{% endif %}
+
+<div class="w-full max-w-[288px] flex items-center justify-between {{ bgColor }} p-4 rounded-xl sm:max-w-full">
+    <div class="flex items-center gap-3">
+        <twig:BaseCardSummaryIcon category="{{ name }}" />
+        <p class="body {{ textColor }}">{{ name }}</p>
+    </div>
+    <div class="flex items-center gap-2">
+        <p class="body-bold text-darkGrayBlue">{{ score }}</p>
+        <p class="body-bold text-darkGrayBlue/50">/ 100</p>
+    </div>
+</div>
